@@ -1,4 +1,5 @@
 #!/bin/bash
-gcc -S $CFILE > main
+gcc -S $CFILE > c
+
 
 
