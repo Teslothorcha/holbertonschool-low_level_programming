@@ -1,6 +1,6 @@
 #include<studio.h>
 /**
- * Prints a a string
+ * main -  Function prints  a string
  *
  * Return: Always 0 (Success)
  */
