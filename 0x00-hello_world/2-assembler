@@ -1,5 +1,6 @@
 #!/bin/bash
-gcc -S $CFILE > c
+gcc -S $CFILE > S
+
 
 
 
