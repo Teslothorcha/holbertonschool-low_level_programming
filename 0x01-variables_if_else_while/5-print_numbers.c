@@ -8,12 +8,9 @@
 int main(void)
 {
 int x;
-for (x = 97; x <= 122; x++)
-{
-if (x != 101 && x != 113)
+for (x = 48; x <= 57; x++)
 {
 putchar(x);
-}
 }
 putchar('\n');
 return (0);
