@@ -1,30 +1,32 @@
-
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
 
 /**
- * main -  Function prints  if random number is +,- or 0
- *
- * Return: Always 0 (Success)
+ *main - prints last digit
+ * is greater than 5 or less than 6 but not 0
+ * Return: 0
  */
+
 int main(void)
 {
 int n;
-int lastDigit;
+int last;
+srand(time(0));
+n = rand() - RAND_MAX / 2;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-lastDigit = n % 10;
-if (lastDigit > 5)
+u = n % 10;
+if (last > 5)
 {
-printf("Last digit of %d is %d and is greater than 5\n", n, lastDigit);
+printf("Last digit of %d is %d and is greater than 5\n", n, u);
 }
-else if (lastDigit < 6 && lastDigit != 0)
+else if (last == 0)
 {
-printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastDigit);
+printf("Last digit of %d is %d and is 0\n", n, u);
 }
 else
+{
+printf("Last digit of %d is %d and is less than 6 and not 0\n", n, u);
 }
-printf("Last digit of %d is %d and is 0\n", n, lastDigit);
+return (0);
 }
