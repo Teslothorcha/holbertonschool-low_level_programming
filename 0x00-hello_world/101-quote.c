@@ -1,13 +1,13 @@
-#include<stdio.h>
-
+#include <unistd.h>
 /**
- * main - Putting character with an char array
+ * main - display a character array
  *
  * Return: Always 1 (Success)
  */
 int main(void)
 {
-char str1ng[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-write(1, str1ng, 59);
+char s[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+write(2, s, 59);
 return (1);
 }
