@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 /**
@@ -7,30 +8,28 @@
  */
 int main(void)
 {
-int x1, x2;
-
-x1 = 48;
-x2 = 48;
-
-while (x2 < 58)
+int y, x;
+y = 48;
+x = 48;
+while (x < 58)
 {
-x1 = 48;
-while (x1 < 58)
+y = 48;
+while (y < 58)
 {
-if (x2 != x1 && x2 < x1)
+if (x != y && x < y)
 {
-putchar(x2);
-putchar(x1);
-if (x1 == 57 && x2 == 56)
+putchar(x);
+putchar(y);
+if (y == 57 && x == 56)
 {
 break;
 }
 putchar(',');
 putchar(' ');
 }
-x1++;
+y++;
 }
-x2++;
+x++;
 }
 putchar('\n');
 return (0);

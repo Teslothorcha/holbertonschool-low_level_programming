@@ -8,37 +8,37 @@
 
 int main(void)
 {
-int x1, x2, x3;
+int x, y, z;
 
-x1 = 48;
-x2 = 48;
-x3 = 48;
+y = 48;
+x = 48;
+z = 48;
 
-while (x2 < 58)
+while (x < 58)
 {
-x1 = 48;
-while (x1 < 58)
+y = 48;
+while (y < 58)
 {
-x3 = 48;
-while (x3 < 58)
+z = 48;
+while (z < 58)
 {
-if (x2 != x1 && x2 != x3 && x1 != x3 && x2 < x1 && x1 < x3)
+if (x != y && x != z && y != z && x < y && y < z)
 {
-putchar(x2);
-putchar(x1);
-putchar(x3);
-if (x1 == 56 && x2 == 55 && x3 == 57)
+putchar(x);
+putchar(y);
+putchar(z);
+if (y == 56 && x == 55 && z == 57)
 {
 break;
 }
 putchar(',');
 putchar(' ');
 }
-x3++;
+z++;
 }
-x1++;
+y++;
 }
-x2++;
+x++;
 }
 putchar('\n');
 return (0);

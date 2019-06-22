@@ -7,42 +7,41 @@
  */
 int main(void)
 {
-int x1, x2, x3, x4, op1, op2;
-
-x1 = x2 = x3 = x4 = 48;
-while (x4 < 58)
+int w, z, y, x, op1, op2;
+w = z = y = x = 48;
+while (x < 58)
 {
-x3 = 48;
-while (x3 < 58)
+y = 48;
+while (y < 58)
 {
-x2 = 48;
-while (x2 < 58)
+z = 48;
+while (z < 58)
 {
-x1 = 48;
-while (x1 < 58)
+w = 48;
+while (w < 58)
 {
-op1 = (x4 * 10) + x3;
-op2 = (x2 * 10) + x1;
+op1 = (x * 10) + y;
+ op2 = (z * 10) + w;
 if (op1 < op2)
 {
-putchar(x4);
-putchar(x3);
+putchar(x);
+putchar(y);
 putchar(' ');
-putchar(x2);
-putchar(x1);
+putchar(z);
+putchar(w);
 
-if (x4 == 57 && x3 == 56 && x2 == 57 && x1 == 57)
+if (x == 57 && y == 56 && z == 57 && w == 57)
 break;
 putchar(',');
 putchar(' ');
 }
-x1++;
+w++;
 }
-x2++;
+z++;
 }
-x3++;
+y++;
 }
-x4++;
+x++;
 }
 putchar('\n');
 return (0);
