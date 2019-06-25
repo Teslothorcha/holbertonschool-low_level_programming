@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * jack_bauer - Prints every minute of the day
+ * jack_bauer- Prints every minute of the day
  *
  * Return: 0 on success
  */
