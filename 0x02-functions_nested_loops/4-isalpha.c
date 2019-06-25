@@ -4,7 +4,6 @@
  * @c:  receibes a char to check it
  *
  * Return: 1 if alphabetic character detected
- * Return: 0 if alphabetic character not detected
  */
 int _isalpha(int c)
 {
