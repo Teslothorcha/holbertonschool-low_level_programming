@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - check the code for Holberton School students.
+ * main - pritns alpahbet.
  *
  * Return: Always 0.
  */

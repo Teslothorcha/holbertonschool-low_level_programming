@@ -1,4 +1,3 @@
-#include <unistd.h>
 #include "holberton.h"
 /**
  * print_alphabet - prints alphabet, in lower case, followed by a new line
@@ -9,12 +8,11 @@
  */
 void print_alphabet(void)
 {
-  char a[26] ;
-  int i ;
-    
-  for(i = 97; i < 123; i++)
-    {
-    _putchar(a[i]);
+char a[] = "abcdefghijklmnopqrstuvwxyz";
+int i ;    
+for(i = 0; i < 27; i++)
+{
+_putchar(a[i]);
 }
-  return(0);
+_putchar('\n');
 }
