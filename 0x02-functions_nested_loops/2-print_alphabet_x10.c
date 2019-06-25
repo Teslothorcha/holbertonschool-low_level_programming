@@ -1,0 +1,20 @@
+#include "holberton.h"
+/**
+ * print_alphabet_x10 - prints alphabet ten times
+ *
+ *
+ * Return: Nothing.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+void print_alphabet_x10(void)
+{
+char a;
+for (int i = 0; i < 10; i++)
+{
+for (a = 'a'; a <= 'z'; a++)
+{
+_putchar(a);
+}
+_putchar('\n');
+}
+}
