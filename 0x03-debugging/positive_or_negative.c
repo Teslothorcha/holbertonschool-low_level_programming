@@ -1,7 +1,7 @@
 #include <stdlib.h>
+#include "holberton.h"
 #include <time.h>
 #include <stdio.h>
-
 /**
  * positive_or_negative -  Function prints  if random number is +,- or 0
  *@n: enter input
