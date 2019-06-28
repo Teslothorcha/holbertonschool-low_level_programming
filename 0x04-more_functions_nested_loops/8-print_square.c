@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * print_square - Prints # specific number of times toforma square
- * @n: the number of times '#' is printed
+ * @size: the number of times '#' is printed
  *
  */
 void print_square(int size)
