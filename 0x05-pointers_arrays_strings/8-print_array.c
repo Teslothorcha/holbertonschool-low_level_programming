@@ -1,8 +1,9 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * puts_half - print in reverse a string.
- * @str: input string.
+ * print_array - print in reverse a string.
+ * @a: input array.
+ * @n: number of array items to print
  */
 void print_array(int *a, int n)
 {
@@ -16,15 +17,15 @@ void print_array(int *a, int n)
 		}
 		le++;
 	}
-	for (i = 0; i < le - ( le - n); i++)
+	for (i = 0; i < le - (le - n); i++)
 	{
-		if(i ==  (le - ( le - n)) - 1)
+		if (i == (le - (le - n)) - 1)
 		{
-			printf("%d",*a);
+			printf("%d", *a);
 		}
 		else
 		{
-			printf("%d",*a);
+			printf("%d", *a);
 			printf(",");
 			printf(" ");
 		}
