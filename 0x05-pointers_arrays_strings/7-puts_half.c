@@ -17,7 +17,7 @@ void puts_half(char *str)
 		le++;
 	}
 	en = str;
-	while(le % 2 == 0)
+	while (le % 2 == 0)
 	{
 		for (i = le / 2; i < le ; i++)
 		{
@@ -30,7 +30,7 @@ void puts_half(char *str)
 	}
 	if (le % 2 != 0)
 	{
-		for (i = le - ((le -1) / 2); i < le ; i++)
+		for (i = le - ((le - 1) / 2); i < le ; i++)
 		{
 			_putchar(en[i]);
 		}
