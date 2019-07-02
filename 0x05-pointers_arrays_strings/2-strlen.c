@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
- * _strlen - switches variable values.
+ * _strlen - gives string lenght.
  *
  * @s: char input
+ * Return: lenght of input
  */
 int _strlen(char *s)
 {
