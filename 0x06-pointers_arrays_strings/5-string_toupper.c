@@ -3,6 +3,7 @@
  * string_toupper - CHanges lowecases to Uppercases on a string.
  *
  * @s: array to convert letters
+ * Return: reutrns array with letter changed
  */
 char *string_toupper(char *s)
 {
