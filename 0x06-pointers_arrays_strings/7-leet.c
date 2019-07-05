@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * cap_string - CHanges lowecases to Uppercases on a string.
+ * leet - CHanges lowecases to Uppercases on a string.
  *
  * @s: array to convert letters
  * Return: reutrns array with letter changed
