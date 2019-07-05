@@ -13,7 +13,7 @@ char *leet(char *s)
 
 	while (s[i] != '\0')
 	{
-		while (b < 13)
+		while (b < 10)
 		{
 			if (s[i] == s2[b])
 			{
