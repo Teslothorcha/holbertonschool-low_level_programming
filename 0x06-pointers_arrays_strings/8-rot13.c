@@ -1,28 +1,31 @@
 #include "holberton.h"
 
 /**
- * *rot13 - encode in root13
- * @ch: character coded or decoded
+ * *rot13 - encodes in  rot13
+ * @s: char to be coded
  *
- * Return: characters
+ * Return: encoded string
  */
-
-char *rot13(char *ch)
+char *rot13(char *s)
 {
-	int i;
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i = 0, j = 0;
 
-	for (i = 0; ch[i] != '\0'; i++)
+	while (s[i] != '\0')
 	{
-		if ((ch[i] >= 'a' && ch[i] <= 'm') || (ch[i] >= 'A' && ch[i] <= 'M'))
+		for (j = 0; j < 52; j++)
 		{
-			ch[i] += 13;
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+				break;
+			}
+		}
+		i++;
 
-		}
-		else if ((ch[i] >= 'n' && ch[i] <= 'z') || (ch[i] >= 'N' && ch[i] <= 'Z'))
-		{
-			ch[i] -= 13;
-		}
-		
 	}
-	return (ch);
+
+	return (s);
+
 }
