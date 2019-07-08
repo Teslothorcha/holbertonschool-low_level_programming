@@ -1,7 +1,6 @@
 #include "holberton.h"
 /**
- * _strpsn - gets length of prefix substring
- *
+ * _strspn - gets length of prefix substring
  * @s: string to search prefix in
  * @accept:  string to be searched for in string prefix
  * Return:  pointer to string.
