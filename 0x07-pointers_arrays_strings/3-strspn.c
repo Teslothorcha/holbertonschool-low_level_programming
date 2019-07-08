@@ -12,7 +12,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (*(s + i) != 32)
 	{
-		if (n != length)
+		if (count != i)
 		{
 			break;
 		}
