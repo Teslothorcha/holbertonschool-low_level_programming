@@ -12,6 +12,10 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (*(s + i) != 32)
 	{
+		if (n != length)
+		{
+			break;
+		}
 		a = 0;
 		while (*(accept + a) != '\0')
 		{
