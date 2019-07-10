@@ -3,6 +3,7 @@
  * _strlen_recursion - prints recursevely a string backwardsx.
  *
  * @s: string
+ * Return: lenght in bytes
  */
 int _strlen_recursion(char *s)
 {
