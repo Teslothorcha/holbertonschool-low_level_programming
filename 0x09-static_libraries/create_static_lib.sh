@@ -1,1 +1,3 @@
-gcc -c *.c || ar -rc liall.a *.o
+#!/bin/bash
+gcc -c *.c
+ar -rc liall.a *.o
