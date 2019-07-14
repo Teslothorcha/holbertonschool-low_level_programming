@@ -1,22 +1,18 @@
+#include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
+
 /**
- * main - prints arguments received
- * @argc: number of command line arguments
- * @argv: array containing the program command line arguments
+ * main - adds positive numbers.
+ * @argc: argument count
+ * @argv: argument vector
  * Return: 0.
  */
-
 int main(int argc, char *argv[])
 {
-	int str, digit, sum = 0;
+	int suma = 0, str, digit;
 
-	if (argc < 2)
-	{
-		printf("0\n");
-		return (0);
-	}
 	for (str = 1; str < argc; str++)
 	{
 		for (digit = 0; argv[str][digit] != '\0'; digit++)
@@ -27,8 +23,8 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
-		sum += atoi(argv[str]);
+		suma += atoi(argv[str]);
 	}
-	printf("%d\n", sum);
+	printf("%d\n", suma);
 	return (0);
 }
