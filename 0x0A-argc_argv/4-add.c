@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	{
 		for (digit = 0; argv[str][digit] != '\0'; digit++)
 		{
-			if (!(isdigit(argv[str][digit])))
+			if (!isdigit(argv[str][digit]))
 			{
 				printf("Error\n");
 				return (1);
