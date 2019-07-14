@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int str, digit, suma = 0;
-	
+
 	for (str = 1; str < argc; str++)
 	{
 		for (digit = 0; argv[str][digit] != '\0'; digit++)
