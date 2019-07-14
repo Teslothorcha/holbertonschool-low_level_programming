@@ -11,24 +11,24 @@
 int main(int argc, char *argv[])
 {
 	int str, digit, sum = 0;
-	
+
 	if (argc < 2)
 	{
 		printf("0\n");
-		return(0);
+		return (0);
 	}
 	for (str = 1; str < argc; str++)
 	{
-		for(digit = 0; argv[str][digit] != '\0'; digit++)
+		for (digit = 0; argv[str][digit] != '\0'; digit++)
 		{
-			if(!(isdigit(argv[str][digit])))
+			if (!(isdigit(argv[str][digit])))
 			{
 				printf("Error\n");
-				return(1);
+				return (1);
 			}
 		}
 		sum += atoi(argv[str]);
 	}
 	printf("%d\n", sum);
 	return (0);
-} 
+}
