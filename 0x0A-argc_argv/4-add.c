@@ -1,25 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
 
 /**
- * main - add
- *@argc: number of arguments
- *@argv: string with arguments
- * Return: 0 1
+ *main - adds positive numbers
+ *@argc: counter
+ *@argv: arguments given
+ *Return: 0 if no argument given, 1 if argument different than digits
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int suma = 0, str, digit;
 
-	if (argc > 1)
+	int suma = 0, str, digit;
+	if (argc < 2)
+	{
+		printf("0\n");
+		return (0);
+	}
+	else
 	{
 		for (str = 1; str < argc; str++)
 		{
 			for (digit = 0; argv[str][digit] != '\0'; digit++)
 			{
-				if (!(isdigit(argv[str][digit])))
+				if (argv[str][digit] < '0' || argv[str][digit] > '9')
 				{
 					printf("Error\n");
 					return (1);
@@ -28,6 +31,6 @@ int main(int argc, char *argv[])
 			suma += atoi(argv[str]);
 		}
 	}
-	printf("%d\n", suma);
+	printf("%i\n", suma);
 	return (0);
 }
