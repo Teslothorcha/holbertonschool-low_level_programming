@@ -1,7 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
-
 /**
  * main - adds positive numbers.
  * @argc: argument count
@@ -23,7 +21,8 @@ int main(int argc, char *argv[])
 				if(val % coinval[i] == 0)
 				{
 					val -=  coinval[i];
-					coin++; 
+					coin++;
+					break;
 				}
 			}
 		}
