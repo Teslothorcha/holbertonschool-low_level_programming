@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 			i = 0;
 			for (i = 0; i < 5; i++)
 			{
-				if (val % coinval[i] == 0)
+				if (val >= coinval[i])
 				{
 					val -=  coinval[i];
 					coin++;
