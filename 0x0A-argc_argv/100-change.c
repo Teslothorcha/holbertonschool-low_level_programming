@@ -10,20 +10,26 @@
  */
 int main(int argc, char *argv[])
 {
-	int suma = 0, str, digit;
-
-	for (str = 1; str < argc; str++)
+	int coin = 0,  str = 1,  val, i;
+	int coinval[5] = {25, 10, 5, 2, 1};
+	if(argc == 2)
 	{
-		for (digit = 0; argv[str][digit] != '\0'; digit++)
+		val = atoi(argv[str]);
+		while(val > 0)
 		{
-			if (!isdigit(argv[str][digit]))
+			i = 0;
+			for(i = 0; i < 5; i++)
 			{
-				printf("Error\n");
-				return (1);
+				if(val % coinval[i] == 0)
+				{
+					val -=  coinval[i];
+					coin++; 
+				}
 			}
 		}
-		suma += atoi(argv[str]);
+		printf("%d\n", coin);
+		return(0);
 	}
-	printf("%d\n", suma);
-	return (0);
+	printf("Error\n");
+	return (1);
 }
