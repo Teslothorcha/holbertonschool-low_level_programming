@@ -11,13 +11,13 @@ int main(int argc, char *argv[])
 	int coin = 0,  str = 1,  val, i;
 	int coinval[5] = {25, 10, 5, 2, 1};
 
-	if(atoi(argv[str]) < 0)
-	{
-		printf("0\n");
-		return(0);
-	}
 	if (argc == 2)
 	{
+		if (atoi(argv[str]) < 0)
+		{
+			printf("0\n");
+			return (0);
+		}
 		val = atoi(argv[str]);
 		while (val > 0)
 		{
