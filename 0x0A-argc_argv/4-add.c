@@ -11,22 +11,22 @@
  */
 int main(int argc, char *argv[])
 {
-	int su, st, di;
+	int su, s, d;
 
 	su = 0;
 	if (argc > 1)
 	{
-		for (st = 1; st < argc; st++)
+		for (s = 1; s < argc; s++)
 		{
-			for (di = 0; argv[st][di] != '\0'; di++)
+			for (d = 0; argv[s][d] != '\0'; d++)
 			{
-				if (!(isdigit(argv[st][di])))
+				if (!(isdigit(argv[s][d])))
 				{
 					printf("Error\n");
 					return (1);
 				}
 			}
-			su += atoi(argv[st]);
+			su += atoi(argv[s]);
 		}
 	}
 	printf("%d\n", su);
