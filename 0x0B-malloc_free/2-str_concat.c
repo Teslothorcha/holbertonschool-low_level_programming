@@ -43,7 +43,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		v[s] = s1[s];
 	}
-	for (dos = 0; dos < teja; dos++)
+	for (dos = 0; dos <= teja; dos++)
 	{
 		v[s] = s2[dos];
 		s++;
