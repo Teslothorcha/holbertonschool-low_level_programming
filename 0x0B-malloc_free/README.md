@@ -8,4 +8,4 @@ Why and when use malloc
 How to use valgrind to check for memory leak
 
 Author 
-Juan David Marin Bernal
+Juan David Marin Bernal.
