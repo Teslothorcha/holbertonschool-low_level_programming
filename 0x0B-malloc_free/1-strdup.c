@@ -11,6 +11,11 @@ char *_strdup(char *str)
 	char *v;
 	int len, i;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	
+	}
 	for (len = 0; str[len] != '\0'; len++)
 	{
 		if (str[len] == '\0')
@@ -18,13 +23,9 @@ char *_strdup(char *str)
 			break;
 		}
 	}
-	v = malloc(sizeof(char) * len);
-	if (str == 0)
-	{
-		return (NULL);
-	
-	}
-	if (v == 0)
+	v = malloc(sizeof(char) * (len + 1));
+
+	if (v == NULL)
 	{
 		return (NULL);
 	
