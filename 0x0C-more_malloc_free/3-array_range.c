@@ -12,10 +12,6 @@ int *array_range(int min, int max)
 	int *range;
 	int count;
 
-	if (min == NULL || max == NULL)
-	{
-		return(NULL);
-	}
 	if (min > max)
 	{
 		return (NULL);
