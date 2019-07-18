@@ -43,14 +43,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	lens1 = _lenght(s1);
 	lens2 = _lenght(s2);
-	if (n < lens2)
+	if (n >= lens2)
 	{
+		n = lens2;
+	}
 		finalstr = malloc(sizeof(char) * (lens1 + n + 1));
-	}
-	else if (n >= lens2)
-	{
-		finalstr = malloc(sizeof(char) * (lens1 + lens2 + 1));
-	}
 	if (finalstr == NULL)
 	{
 		return (NULL);
