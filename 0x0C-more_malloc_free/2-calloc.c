@@ -9,8 +9,8 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int *ceros;
-	int count;
+	char *ceros;
+	unsigned int count;
 
 	if (nmemb == 0 || size == 0)
 	{
@@ -21,7 +21,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	for (count = 0; ceros[count] < (nmemb * size); count++)
+	for (count = 0; count < (nmemb * size); count++)
 	{
 		ceros[count] = 0;
 	}
