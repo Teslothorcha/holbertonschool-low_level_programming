@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * *_array_range - Creates an array and initializes it with a range on integers
+ * *array_range - Creates an array and initializes it with a range on integers
  * @min: begining of the range
  * @max: Limit of the range
  * Return: Array of integers.
