@@ -47,7 +47,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		n = lens2;
 	}
-		finalstr = malloc(sizeof(char) * (lens1 + n + 1));
+	finalstr = malloc(sizeof(char) * (lens1 + n + 1));
 	if (finalstr == NULL)
 	{
 		return (NULL);
@@ -56,19 +56,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		finalstr[final] = s1[final];
 	}
-	if (n >= lens2)
+	for (final2 = 0; final2 <= n; final2++, final++)
 	{
-		for (final2 = 0; final2 <= lens2; final2++, final++)
-		{
-			finalstr[final] = s2[final2];
-		}
-	}
-	else if (n < lens2)
-	{
-		for (final2 = 0; final2 <= n; final2++, final++)
-		{
-			finalstr[final] = s2[final2];
-		}
+		finalstr[final] = s2[final2];
 	}
 	return (finalstr);
 }
