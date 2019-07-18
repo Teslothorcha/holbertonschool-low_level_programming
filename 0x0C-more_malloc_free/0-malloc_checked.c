@@ -1,11 +1,11 @@
 #include "holberton.h"
+#include <stdio.h>
 #include "stdlib.h"
 /**
- * *create_array - crates array an it dynamic memory initialized
- * @c: character to popupalte the array with
- * @size: the size of the array to populate
+ * *malloc_checked - creates memory with malloc
+ * @b: amount of bytes to create in memory
  *
- * Return: Nothing.
+ * Return: void pointer.
  */
 void *malloc_checked(unsigned int b)
 {
@@ -16,5 +16,5 @@ void *malloc_checked(unsigned int b)
 	{
 		exit(98);
 	}
-	return(str);
+	return (str);
 }
