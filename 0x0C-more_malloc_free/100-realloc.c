@@ -13,17 +13,20 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	char *str, *tmp;
 	unsigned int count;
 
-
+	if (ptr == NULL)
+	{
+		ptr = malloc(new_size);
+	}
 	if (new_size == old_size)
 	{
 		return (ptr);
 	}
-	if (new_size == 0 && ptr != NULL)
+	if (new_size == 0 && ptr != 0)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	str = malloc(new_size);
+	str = malloc(new_size * sizeof(char));
 	if (!str)
 	{
 		return (NULL);
@@ -37,5 +40,5 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		}
 	}
 	free(ptr);
-	return (ptr);
+	return (str);
 }
