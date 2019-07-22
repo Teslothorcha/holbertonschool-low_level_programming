@@ -14,4 +14,4 @@ typedef struct dog
 	char *owner;
 } dog;
 
-#endif DOGO_H
+#endif /* DOGO_H */
