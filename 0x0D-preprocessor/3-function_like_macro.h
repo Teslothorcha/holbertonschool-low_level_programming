@@ -1,4 +1,3 @@
-#pragma once
 #ifndef ABSO
 #define ABSO
 
