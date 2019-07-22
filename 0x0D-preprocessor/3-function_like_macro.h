@@ -1,2 +1,7 @@
 #pragma once
+#ifndef ABSO
+#define ABSO
+
 #define ABS(x) (((x) < 0) ? -(x) : (x))
+
+#endif /* ABSO */
