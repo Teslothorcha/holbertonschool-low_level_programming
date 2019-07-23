@@ -39,7 +39,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	(*copy_nd).age = age;
 	for (copy_owner = 0; copy_owner < lenght_owner; copy_owner++)
 	{
-		(*copy_nd).owner[copy_owner] = name[copy_owner];
+		(*copy_nd).owner[copy_owner] = owner[copy_owner];
 	}
 	(*copy_nd).owner[copy_owner] = '\0';
 	return (copy_nd);
