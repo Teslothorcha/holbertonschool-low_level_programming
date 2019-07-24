@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "function_pointers.h"
 /**
  * print_name - will callback a fuction through a pointer
@@ -6,8 +7,9 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if(name)
+	if(!name)
 	{
-		f(name);
+		exit(0);
 	}
+		f(name);
 }
