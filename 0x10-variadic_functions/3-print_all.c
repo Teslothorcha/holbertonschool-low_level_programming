@@ -13,6 +13,7 @@ void strin_g(va_list list)
 	if (o == NULL)
 	{
 		printf("(nil)");
+		return;
 	}
 	printf("%s", o);
 }
