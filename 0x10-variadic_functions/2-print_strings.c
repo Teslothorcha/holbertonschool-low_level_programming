@@ -35,7 +35,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			}
 			else if (counter == 0)
 			{
-				printf("nil)");
+				printf("(nil)");
 			}
 		}
 	va_end(list_str);
