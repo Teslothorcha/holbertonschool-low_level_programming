@@ -10,11 +10,15 @@ void intege_r(va_list list);
 void floa_t(va_list list);
 void cha_r(va_list list);
 void print_all(const char * const format, ...);
-
+/**
+ * op - Operation
+ *@form: parameter that indicates format
+ * @func: Points to a function that prints
+ */
 typedef struct op
 {
 	char form;
 	void (*func)(va_list);
-}operation ;
+} operation;
 
 #endif
