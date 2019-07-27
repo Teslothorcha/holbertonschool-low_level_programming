@@ -11,7 +11,7 @@ void floa_t(va_list list);
 void cha_r(va_list list);
 void print_all(const char * const format, ...);
 /**
- * op - Operation
+ * struct op - op
  *@form: parameter that indicates format
  * @func: Points to a function that prints
  */
