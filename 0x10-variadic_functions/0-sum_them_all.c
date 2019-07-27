@@ -10,6 +10,8 @@ int sum_them_all(const unsigned int n, ...)
 	va_list list_num;
 	unsigned int result = 0, counter;
 
+	if (n == 0)
+		return (0);
 	va_start(list_num, n);
 	for (counter = 0; counter < n; counter++)
 	{
