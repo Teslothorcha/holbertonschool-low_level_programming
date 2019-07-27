@@ -18,7 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		str = va_arg(list_str, char*);
 		if (str != NULL)
 		{
-			if (counter == 0)
+			if (counter == 0 || separator == NULL)
 				printf("%s", str);
 			else if (counter != 0)
 			{
@@ -33,7 +33,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("%s", separator);
 				printf("(nil)");
 			}
-			else if (counter == 0)
+			else if (counter == 0 || separator == NULL)
 			{
 				printf("(nil)");
 			}
