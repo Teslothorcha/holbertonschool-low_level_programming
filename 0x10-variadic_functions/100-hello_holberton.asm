@@ -1,15 +1,11 @@
-	section .data
-	    msg db "hello, world!", 0x0a ; 0x0a = \n
-	    .size equ $ - msg
+section .rodata
+msg:	    db 'Hello, hoLberton', 10
+msglen:	 equ $-msg
 
 	section .text
-	    global start
-start:
-	        mov rax, 0x2000004
+main:
 	        mov rdi, 1
 	        mov rsi, msg
-	        mov rdx, msg.size
+	        mov rdx, msglen
+	        mov rax, 1
 	        syscall
-
-	        mov eax, 0x2000001
-	        mov rdi, 0
