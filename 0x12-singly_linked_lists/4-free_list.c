@@ -13,7 +13,7 @@ void free_list(list_t *head)
 	{
 		through = head;
 		head = head->next;
-		fee(through->str);
+		free(through->str);
 		free(through);
 	}
 }
