@@ -1,9 +1,7 @@
 #include "lists.h"
 /**
- * add_node_end - add  nodes at the end of the list
- *@head: first structure in the list
- *@str: string to add to new structure
- *Return: new structure with str on it
+ * free_list - free space allocated for list in memory
+ *@head: Head of the lis to be freed
  */
 void free_list(list_t *head)
 {
