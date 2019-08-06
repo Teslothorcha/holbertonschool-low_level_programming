@@ -1,10 +1,9 @@
 #include "lists.h"
 /**
- *delete_nodeint_at_index - add node at n given position
+ *delete_nodeint_at_index - deletes node at n given position
  *@head: - pointer to the head of the list
- *@idx: index position of new pointer
- *@n: data to be insert on nwe node
- *Return: pointer to the new  node
+ *@index: index position of new pointer
+*Return: pointer to the new  node
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
