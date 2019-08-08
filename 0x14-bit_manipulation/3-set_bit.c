@@ -3,7 +3,7 @@
  *set_bit - searches specific bit on number
  *@n: number to insert bit in
  *@index: position for bit to be added
- *Return: 0 if succeded
+ *Return: 1 if succeded
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
@@ -14,5 +14,5 @@ int set_bit(unsigned long int *n, unsigned int index)
 	mask = 1 << index;
 	*n |= mask;
 
-	return (0);
+	return (1);
 }
