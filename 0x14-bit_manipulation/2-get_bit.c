@@ -1,0 +1,16 @@
+#include "holberton.h"
+/**
+ *get_bit - searches specific bit on number
+ *@n: number to find bit
+ *@index: bit to search
+ *Return: value of bit
+ */
+int get_bit(unsigned long int n, unsigned int index)
+{
+	if (index > 63)
+		return (-1);
+	n >>= index;
+	if (n & 1)
+		return (1);
+	return (0);
+}
