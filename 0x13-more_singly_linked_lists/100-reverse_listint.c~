@@ -1,0 +1,23 @@
+#include "lists.h"
+/**
+ *delete_nodeint_at_index - deletes node at n given position
+ *@head: - pointer to the head of the list
+ *@index: index position of new pointer
+*Return: pointer to the new  node
+ */
+listint_t *reverse_listint(listint_t **head)
+{
+	listint_t *fwd = NULL, *bwd = NULL;
+
+	if (head == NULL)
+		return (NULL);
+	while (*head)
+	{
+		fwd = (*head)->next;
+		(*head)->next = bwd;
+		bwd = *head;
+		*head = fwd;
+	}
+	*head = bwd;
+	return (*head);
+}

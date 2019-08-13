@@ -1,0 +1,20 @@
+#include "holberton.h"
+/**
+ *clear_bit - turn of bit on defined position
+ *@n: number of bit to be turned off
+ *@index: position for bit to be erased
+ *Return: 1 if succeded
+ */
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
+{
+	unsigned long int xor = n ^ m, bit = 0;
+
+	while (xor > 0)
+	{
+		if (xor & 1)
+			bit++;
+		xor >>= 1;
+	}
+
+	return (bit);
+}
