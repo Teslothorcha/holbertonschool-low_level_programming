@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	if (readd == -1)
+	if (readd < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
 		exit(98);
