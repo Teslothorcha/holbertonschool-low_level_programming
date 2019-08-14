@@ -25,7 +25,7 @@ void closebitch(int *from, int *to)
  */
 int main(int argc, char *argv[])
 {
-	int openfrom, opento, readd = 1;
+	int openfrom, opento, readd;
 	char *buffer[1024];
 
 	if (argc != 3)
@@ -45,23 +45,19 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
 		exit(99);
 	}
-	while (readd)
+	while ((readd = read(openfrom, buffer, 1024)) > 0)
 	{
-		readd = read(openfrom, buffer, 1024);
-		if (readd == -1)
+		if (write(opento, buffer, readd) < 0)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
-			exit(98);
-		}
-		if (readd)
-		{
-			if ((write(opento, buffer, readd)) == -1)
-			{
-				dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
-				exit(99);
-			}
+			dprintf(STDERR_FILENO, "Error: Can\'t write to %s\n", argv[2]);
+			exit(99);
 		}
 	}
+	if (readd == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
+		exit(98);
+	}
 	closebitch(&openfrom, &opento);
-return (0);
+	return (0);
 }
