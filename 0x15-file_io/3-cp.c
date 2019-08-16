@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 	opento = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 00664);
 	if (opento == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	while ((readd = read(openfrom, buffer, 1024)) > 0)
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 	}
 	if (readd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	closebitch(&openfrom, &opento);
