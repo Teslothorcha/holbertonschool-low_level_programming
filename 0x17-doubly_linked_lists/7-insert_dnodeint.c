@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * insert_dnodeint_at_index - adds node at the beginning of a dlistint_t list.
  * @h: pointer to the first element of the list
