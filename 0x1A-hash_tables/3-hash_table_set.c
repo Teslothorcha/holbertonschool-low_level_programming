@@ -71,10 +71,9 @@ int h_t_s(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(key, aux->key) == 0)
 		{
 			free(aux->value);
-			aux->value = malloc(strlen(value) * sizeof(char));
+			aux->value = strdup(value);
 			if (!aux->value)
 				return (0);
-			aux->value = c_v;
 		}
 		aux = aux->next;
 	}
