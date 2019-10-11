@@ -41,7 +41,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else if (tmp != NULL)
 		return (h_t_s(ht, key, value));
-	return (0);
+	return (1);
 }
 /**
  *h_t_s - adds an ellement to a hash table
