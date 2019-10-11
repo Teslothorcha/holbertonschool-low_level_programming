@@ -35,11 +35,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (!add_h->value)
 			return (0);
 		add_h->value = c_v;
+		add_h->next = NULL;
 		ht->array[ind] = add_h;
 		return (1);
 	}
 	return (h_t_s(ht, key, value));
-	return (1);
 }
 /**
  *h_t_s - adds an ellement to a hash table
@@ -80,9 +80,6 @@ int h_t_s(hash_table_t *ht, const char *key, const char *value)
 	}
 	aux = ht->array[ind];
 	add_h->key = c_k;
-	add_h->value = malloc(strlen(value) * sizeof(char));
-	if (!add_h->value)
-		return (0);
 	add_h->value = c_v;
 	add_h->next = aux;
 	ht->array[ind] = add_h;
