@@ -21,9 +21,9 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (f == 0)
 				printf("'%s': '%s'", tmp->key, tmp->value);
-			f = 1;
-			if (f == 1)
+			else if (f == 1)
 				printf(", '%s': '%s'", tmp->key, tmp->value);
+			f = 1;
 			tmp = tmp->next;
 		}
 	}
