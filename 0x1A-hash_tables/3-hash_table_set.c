@@ -59,7 +59,7 @@ int h_t_s(hash_table_t *ht, const char *key, const char *value)
 			aux->value = strdup(value);
 			if (!aux->value)
 				return (0);
-			return(1);
+			return (1);
 		}
 		aux = aux->next;
 	}
