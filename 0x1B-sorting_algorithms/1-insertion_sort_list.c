@@ -9,6 +9,8 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *limit, *cmp, *uns;
 
+	if (list == NULL || *list == NULL || (*list)->next == NULL)
+		return;
 	limit = *list;
 	if (limit->next)
 		uns = limit->next;
