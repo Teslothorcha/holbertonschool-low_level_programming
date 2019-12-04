@@ -1,8 +1,9 @@
 #include "binary_trees.h"
 /**
- * binary_tree_node - Entry point
- *
- * Return: Always 0 (Success)
+ * binary_tree_node - inerts new node
+ * @parent: parent new node
+ * @value: valu to insert on new node
+ * Return: new node
  */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {

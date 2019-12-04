@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "binary_trees.h"
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * binary_tree_height - determines height of a given tree
+ * @tree: root tree node
+ * Return: height
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
@@ -12,6 +12,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 
 	if (!tree)
 		return (0);
+
 	else
 	{
 		if (tree->left)
@@ -29,8 +30,8 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		else
 			h_r = 0;
 		if (h_l < h_r)
-			return(h_r);
+			return (h_r);
 		else
-			return(h_l);
+			return (h_l);
 	}
 }

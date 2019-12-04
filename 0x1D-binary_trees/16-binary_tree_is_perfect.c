@@ -2,9 +2,9 @@
 #include <math.h>
 #include "binary_trees.h"
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * binary_tree_height - determines height of a given tree
+ * @tree: tree's root node
+ * Return: height
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
@@ -13,6 +13,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 
 	if (!tree)
 		return (0);
+
 	else
 	{
 		if (tree->left)
@@ -30,15 +31,15 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		else
 			h_r = 0;
 		if (h_l < h_r)
-			return(h_r);
+			return (h_r);
 		else
-			return(h_l);
+			return (h_l);
 	}
 }
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * binary_tree_size - determines amount of nodes
+ * @ tree: tree's root node
+ * Return: a,mount of nodes
  */
 size_t binary_tree_size(const binary_tree_t *tree)
 {
@@ -47,13 +48,17 @@ size_t binary_tree_size(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
-	if(tree->left)
+	if (tree->left)
 		l = tree->left;
-	if(tree->right)
+	if (tree->right)
 		r = tree->right;
 	return (binary_tree_size(l) + 1 + binary_tree_size(r));
 }
-
+/**
+ * binary_tree_is_perfect - determines amount if tree is perfect
+ * @tree: tree's root node
+ * Return: 1 if tree s perfect
+ */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	size_t h, s, i = 0, f_p = 1;
@@ -61,7 +66,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	h = binary_tree_height(tree);
 	s = binary_tree_size(tree);
 
-	while(i < h + 1)
+	while (i < h + 1)
 	{
 		f_p *= 2;
 		i++;
@@ -73,7 +78,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (!(tree->left) && !(tree->right))
 		return (1);
 	if ((f_p - 1) == s)
-		return(1);
+		return (1);
 
 	return (0);
 }

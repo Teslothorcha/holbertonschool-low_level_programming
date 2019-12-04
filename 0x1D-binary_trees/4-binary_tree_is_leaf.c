@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * binary_tree_is_leaf - check if node is a leaf
+ * @node: node to check
+ * Return: 1 on success
  */
 int binary_tree_is_leaf(const binary_tree_t *node)
 {
