@@ -38,7 +38,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 }
 /**
  * binary_tree_size - determines amount of nodes
- * @ tree: tree's root node
+ * @tree: tree's root node
  * Return: a,mount of nodes
  */
 size_t binary_tree_size(const binary_tree_t *tree)
